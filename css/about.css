@@ -1,0 +1,176 @@
+/*! About Hero */
+.about-hero {
+  width: var(--container-secondary-width);
+  margin: 0 auto;
+  text-align: center;
+  user-select: none;
+}
+
+.about-hero img {
+  width: 100%;
+}
+
+.about-hero h1 {
+  font-size: 45px;
+  margin-top: 1rem;
+  text-transform: uppercase;
+}
+
+.about-hero p {
+  width: 90%;
+  margin: 1rem auto 0;
+  line-height: 1.4;
+  font-size: 21px;
+  font-family: serif;
+}
+
+.about-hero img:last-of-type {
+  margin-top: 4rem;
+}
+
+.about-hero p.quote {
+  font-size: 42px;
+  width: 80%;
+  margin-bottom: 3rem;
+}
+
+@media screen and (max-width: 1200px) {
+  .about-hero p {
+    font-size: 18px;
+  }
+
+  .about-hero p.quote {
+    font-size: 32px;
+    width: 80%;
+    margin-bottom: 3rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .about-hero h1 {
+    font-size: 25px;
+    margin-top: 1rem;
+    text-transform: uppercase;
+  }
+
+  .about-hero p {
+    font-size: 16px;
+  }
+
+  .about-hero p.quote {
+    font-size: 22px;
+  }
+}
+
+/*! About Info */
+.about-info {
+  width: var(--container-width);
+  margin: 0 auto;
+  padding: 4rem 6rem;
+  margin-bottom: 4rem;
+  background-color: #f4f4f4;
+}
+
+.about-info .info-card,
+.about-collections .info-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  text-align: center;
+}
+
+.about-info .info-card img {
+  padding: 0 1rem;
+}
+
+.about-info .info-card img,
+.about-collections .info-card img {
+  width: 50%;
+}
+
+.about-info .info-card p,
+.about-collections .info-card p {
+  font-size: 21px;
+  line-height: 1.6;
+  font-family: serif;
+}
+
+.about-info .info-card div h1 {
+  margin-bottom: 0.75rem;
+  text-transform: uppercase;
+}
+
+/*! About Collections */
+.about-collections {
+  width: var(--container-width);
+  margin: 0 auto;
+  padding: 4rem 4rem 6rem;
+}
+
+.about-collections .info-card:not(:last-child) {
+  margin-bottom: 6rem;
+}
+
+.about-collections .info-card div {
+  width: 50%;
+}
+
+.about-collections .info-card p {
+  margin: 1.25rem 0;
+}
+
+.about-collections .info-card h3 {
+  text-transform: uppercase;
+}
+
+.about-collections .info-card button {
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: 0px;
+}
+
+@media screen and (max-width: 1200px) {
+  .about-info .info-card p,
+  .about-collections .info-card p {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .about-info .info-card,
+  .about-collections .info-card {
+    flex-wrap: wrap;
+  }
+
+  .about-info .info-card img,
+  .about-collections .info-card img {
+    width: 100%;
+  }
+
+  .about-info .info-card p {
+    margin-bottom: 1.5rem;
+  }
+
+  .about-info .info-card.reversed,
+  .about-collections .info-card.reversed {
+    flex-wrap: wrap-reverse;
+  }
+
+  .about-collections .info-card div {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .about-info,
+  .about-collections {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .about-collections .info-card div button {
+    line-height: 1.4;
+    font-size: 12px;
+  }
+}

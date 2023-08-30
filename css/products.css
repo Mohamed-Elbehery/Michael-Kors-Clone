@@ -1,0 +1,206 @@
+/*! Variables */
+:root {
+  --container-width: 72.5%;
+  --container-secondary-width: 75%;
+}
+
+@media screen and (max-width: 1280px) {
+  :root {
+    --container-width: 85%;
+    --container-secondary-width: 90%;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  :root {
+    --container-width: 90%;
+    --container-secondary-width: 95%;
+  }
+}
+
+/*! Main Styles */
+.products {
+  width: var(--container-width);
+  margin: 0 auto;
+  padding: 3rem 0 2rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.products .filter__sort-btns {
+  display: none;
+}
+
+/* Left Side */
+.products aside {
+  flex: 1;
+}
+
+.products aside ul li h3 {
+  font-size: 18px;
+  margin-bottom: 1rem;
+  cursor: auto;
+}
+
+.products aside ul {
+  margin-bottom: 1rem;
+}
+
+.products aside ul li {
+  margin-bottom: 0.75rem;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.products aside ul li:last-of-type {
+  margin-bottom: 1.75rem;
+}
+
+.products aside ul li:hover:not(.products aside ul li:has(h3)) {
+  text-decoration: underline;
+}
+
+/* Right Side */
+.products .right-side {
+  flex: 3;
+}
+
+.products .products-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 1rem;
+  row-gap: 2.5rem;
+}
+
+.products .products-container:not(.products .products-container:last-child) {
+  margin-bottom: 3rem;
+}
+
+.products .products-container .product.outfit-view {
+  grid-column: 3 / span 4;
+  grid-row: 1 / span 2;
+  text-align: center;
+}
+
+.products .products-container .product.outfit-view .product-info h2 {
+  font-size: 21px;
+  margin: 0.5rem 0;
+  font-weight: 600;
+}
+
+.products .products-container .product.outfit-view .product-info p {
+  max-width: 450px;
+  margin: 0 auto;
+  font-size: 21px;
+  font-family: serif;
+  line-height: 1.6;
+}
+
+.products .products-container .product .product-img {
+  position: relative;
+  overflow: hidden;
+}
+
+.products .products-container .product .product-img img {
+  width: 100%;
+}
+
+.products .products-container .product .product-img button {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -25px;
+  background-color: white;
+  color: black;
+  text-align: center;
+  height: 30px;
+  transition: bottom 0.35s;
+  font-family: sans-serif;
+  text-transform: uppercase;
+}
+
+.products .products-container .product .product-img:hover button {
+  bottom: 5px;
+}
+
+.products .products-container .product .product-img button:hover {
+  background-color: black;
+  color: white;
+}
+
+.products .products-container .product .product-info h4,
+.products .products-container .product .product-info p {
+  font-size: 12px;
+}
+
+.products .products-container .product .product-info h4 {
+  font-weight: 600;
+  letter-spacing: 1px;
+  font-size: 11px;
+  margin-top: 0.5rem;
+}
+
+.products .products-container .product .product-info p {
+  margin: 0.5rem 0;
+}
+
+.products .products-container.reversed .product.outfit-view {
+  grid-column: 1 / span 2;
+  grid-row: 1 / span 2;
+  text-align: center;
+}
+
+.products .products-container.reversed .product.outfit-view a {
+  display: block;
+  margin-top: 1rem;
+  letter-spacing: 1px;
+  font-weight: 600;
+  font-family: sans-serif;
+  font-size: 15px;
+}
+
+@media screen and (max-width: 1023px) {
+  .products {
+    flex-direction: column;
+  }
+
+  .products aside {
+    display: none;
+  }
+
+  .products .filter__sort-btns {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    margin-bottom: 2rem;
+  }
+
+  .products .filter__sort-btns button {
+    width: 100%;
+    padding: 0.75rem 0;
+    font-weight: 600;
+    text-align: center;
+    border: 1px solid lightgray;
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .products {
+    width: 100%;
+    padding: 3rem 1rem 2rem;
+  }
+
+  .products .products-container {
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+  }
+
+  .products .products-container .product.outfit-view {
+    grid-column: 1 / span 2;
+    grid-row: 2 / span 4;
+  }
+}

@@ -1,0 +1,150 @@
+/*! Variables */
+:root {
+  --container-width: 72.5%;
+  --container-secondary-width: 75%;
+}
+
+@media screen and (max-width: 1280px) {
+  :root {
+    --container-width: 85%;
+    --container-secondary-width: 90%;
+  }
+}
+
+/*! Main Styles */
+.login {
+  max-width: 1000px;
+  padding: 3rem 0;
+  margin: 0 auto;
+}
+
+.login .container {
+  display: flex;
+  gap: 1rem;
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  padding: 1rem 1rem calc(1rem - 5px);
+  height: 500px;
+}
+
+/** Left Side */
+
+.login .container form {
+  flex: 1;
+}
+
+.login .container form .field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.login .container form .field label {
+  margin-bottom: 0.5rem;
+  font-size: 14px;
+}
+
+.login .container form .field input {
+  padding: 0.5rem;
+  border: 1px solid lightgray;
+  outline: none;
+  border-radius: 4px;
+}
+
+.login .container form .login-func .field {
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.login .container form .login-func .field button {
+  border: 1px solid black;
+  color: black;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: 0.35s;
+}
+
+.login .container form .login-func .field button:hover {
+  background-color: black;
+  color: white;
+}
+
+.login .container form .hr {
+  margin-top: 2rem;
+  position: relative;
+  height: 1px;
+  background-color: lightgray;
+}
+
+.login .container form .hr::before {
+  content: "or";
+  position: absolute;
+  z-index: 999;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  height: 20px;
+  width: 20px;
+  background-color: white;
+  padding: 0 1.5rem;
+}
+
+.login .container form .login-methods {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.login .container form .login-methods button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: #000000;
+  padding: 0.5rem;
+  border-radius: 4px;
+}
+
+.login .container form .login-methods button img {
+  width: 40px;
+}
+
+.login .container form .login-methods button {
+  color: white;
+}
+
+/** Right Side */
+.login .container div:has(img) {
+  flex: 1;
+}
+
+.login .container div img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 4px;
+}
+
+@media screen and (max-width: 1023px) {
+  .login .container {
+    flex-direction: column;
+    height: auto;
+    max-width: 720px;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .login .container {
+    max-width: 500px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .login .container {
+    border-radius: 0;
+  }
+}
