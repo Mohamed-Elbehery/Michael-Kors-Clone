@@ -12,7 +12,6 @@
 
 .contact-form .container {
   display: flex;
-  align-items: center;
   justify-content: space-between;
   gap: 2rem;
   margin: 0 auto;
@@ -80,8 +79,8 @@
 }
 
 .contact-form .container > div div textarea {
-  min-height: 200px;
-  max-height: 400px;
+  min-height: 100px;
+  max-height: 300px;
 }
 
 .contact-form .container div button {
